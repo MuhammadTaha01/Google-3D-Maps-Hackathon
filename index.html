@@ -1,12 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>Google 3D Maps Hackathon</title>
-</head>
-<body>
-    
-</body>
+<html>
+    <head>
+        <title>Photorealistic 3D Maps Demo</title>
+        <link
+            rel="stylesheet"
+            href="/styles.css" />
+    </head>
+    <body>
+        <!--Places Autocomplete Card-->
+        <div
+            class="pac-card"
+            id="pac-card">
+            <div>
+                <div id="title">Autocomplete search</div>
+                <div
+                    id="type-selector"
+                    class="pac-controls">
+                    <input
+                        type="radio"
+                        name="type"
+                        id="changetype-all"
+                        checked="checked" />
+                    <label for="changetype-all">All</label>
+
+                    <input
+                        type="radio"
+                        name="type"
+                        id="changetype-establishment" />
+                    <label for="changetype-establishment">establishment</label>
+
+                    <input
+                        type="radio"
+                        name="type"
+                        id="changetype-address" />
+                    <label for="changetype-address">address</label>
+
+                    <input
+                        type="radio"
+                        name="type"
+                        id="changetype-geocode" />
+                    <label for="changetype-geocode">geocode</label>
+
+                    <input
+                        type="radio"
+                        name="type"
+                        id="changetype-cities" />
+                    <label for="changetype-cities">(cities)</label>
+
+                    <input
+                        type="radio"
+                        name="type"
+                        id="changetype-regions" />
+                    <label for="changetype-regions">(regions)</label>
+                </div>
+                <br />
+                <!--TODO: Bias to map viewport and Strict bounds still doesn't work-->
+                <div
+                    id="strict-bounds-selector"
+                    class="pac-controls">
+                    <input
+                        type="checkbox"
+                        id="use-location-bias"
+                        value=""
+                        checked />
+                    <label for="use-location-bias">Bias to map viewport</label>
+
+                    <input
+                        type="checkbox"
+                        id="use-strict-bounds"
+                        value="" />
+                    <label for="use-strict-bounds">Strict bounds</label>
+                </div>
+                <!--TODO--------------------------------------------------------------------->
+            </div>
+            <div id="pac-container">
+                <input
+                    id="pac-input"
+                    type="text"
+                    placeholder="Enter a location" />
+            </div>
+        </div>
+        <!--End of Places Autocomplete Card-->
+
+        <!-- prettier-ignore-->
+        <script>
+            (g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })({
+                key: "AIzaSyAd0enxIW1Gw282RLLjlxmVearQfnjXJIM",
+                v: "alpha"
+                });
+        </script>
+        <script src="initMap.js"></script>
+        <!--Script to start the map must come first before other scripts.-->
+        <script src="placesAutocomplete.js"></script>
+        <script>
+            init();
+        </script>
+    </body>
 </html>

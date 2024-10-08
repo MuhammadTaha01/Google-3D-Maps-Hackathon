@@ -1,14 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>Google 3D Maps Hackathon</title>
-</head>
-<body>
-    
+<html>
+  <head>
+    <title>Locator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="locatorplus.css" rel="stylesheet">
+    <script>
+      const CONFIGURATION = {
+        "locations": [
+          {"title":"Escondido Grill","address1":"601 Geary St","address2":"San Francisco, CA 94102, USA","coords":{"lat":37.7866,"lng":-122.4133},"placeId":"ChIJ5Sz52pGAhYAR1raOybzuDp8","actions":[{"label":"Reserve a table","defaultUrl":"https://www.gstatic.com/pantheon/images/maps/reserve_with_google_preview_v1.png"}]},
+          {"title":"Escondido Grill","address1":"747 3rd St","address2":"San Francisco, CA 94107, USA","coords":{"lat":37.7785,"lng":-122.392},"placeId":"ChIJeyVKpNd_j4ARLUED10OEr1s","actions":[{"label":"Reserve a table","defaultUrl":"https://www.gstatic.com/pantheon/images/maps/reserve_with_google_preview_v1.png"}]},
+          {"title":"Escondido Grill","address1":"1512 Stockton St","address2":"San Francisco, CA 94133, USA","coords":{"lat":37.7998,"lng":-122.4089},"placeId":"ChIJgYMdZvGAhYAR2ifWKOR5ek8","actions":[{"label":"Reserve a table","defaultUrl":"https://www.gstatic.com/pantheon/images/maps/reserve_with_google_preview_v1.png"}]},
+          {"title":"Escondido Grill","address1":"50 Clement St","address2":"San Francisco, CA 94118, USA","coords":{"lat":37.7833,"lng":-122.46},"placeId":"ChIJk_FWiDmHhYARgDVidBVO_RM","actions":[{"label":"Reserve a table","defaultUrl":"https://www.gstatic.com/pantheon/images/maps/reserve_with_google_preview_v1.png"}]},
+          {"title":"Escondido Grill","address1":"3755 Noriega St","address2":"San Francisco, CA 94122, USA","coords":{"lat":37.7529,"lng":-122.5042},"placeId":"ChIJ_2knd4-HhYARI5PPNZ7aasA","actions":[{"label":"Reserve a table","defaultUrl":"https://www.gstatic.com/pantheon/images/maps/reserve_with_google_preview_v1.png"}]},
+          {"title":"Escondido Grill","address1":"2619 Mission St","address2":"San Francisco, CA 94110, USA","coords":{"lat":37.7552,"lng":-122.4184},"placeId":"ChIJSwWfLT9-j4ARMGcgMs-tBRE","actions":[{"label":"Reserve a table","defaultUrl":"https://www.gstatic.com/pantheon/images/maps/reserve_with_google_preview_v1.png"}]},
+          {"title":"Escondido Grill","address1":"4935 Mission St","address2":"San Francisco, CA 94112, USA","coords":{"lat":37.7194,"lng":-122.4386},"placeId":"ChIJtYdd3IR-j4ARSybFjVnGTBw","actions":[{"label":"Reserve a table","defaultUrl":"https://www.gstatic.com/pantheon/images/maps/reserve_with_google_preview_v1.png"}]},
+          {"title":"Escondido Grill","address1":"6202 3rd St","address2":"San Francisco, CA 94124, USA","coords":{"lat":37.7223,"lng":-122.396},"placeId":"ChIJ0VRZVB9_j4ARaB7r66H67eg","actions":[{"label":"Reserve a table","defaultUrl":"https://www.gstatic.com/pantheon/images/maps/reserve_with_google_preview_v1.png"}]}
+        ],
+        "mapOptions": {"center":{"lat":38.0,"lng":-100.0},"fullscreenControl":true,"mapTypeControl":false,"streetViewControl":false,"zoom":4,"zoomControl":true,"maxZoom":17,"mapId":""},
+        "mapsApiKey": "AIzaSyAd0enxIW1Gw282RLLjlxmVearQfnjXJIM",
+        "capabilities": {"input":true,"autocomplete":true,"directions":false,"distanceMatrix":true,"details":false,"actions":true}
+      };
+
+    </script>
+    <script src="locatorplus.js" type="module"></script>
+  </head>
+  <body>
+
+
+    <!--  -->
+<!-- Please note unpkg.com is unaffiliated with Google Maps Platform. -->
+<script type="module" src="https://unpkg.com/@googlemaps/extended-component-library@0.6"></script>
+
+<!-- Uses components from the Extended Component Library; see
+     https://github.com/googlemaps/extended-component-library for more information
+     on these HTML tags and how to configure them. -->
+<gmpx-api-loader key="AIzaSyAd0enxIW1Gw282RLLjlxmVearQfnjXJIM" solution-channel="GMP_QB_locatorplus_v10_cABCDEF"></gmpx-api-loader>
+<gmpx-store-locator map-id="AIzaSyAd0enxIW1Gw282RLLjlxmVearQfnjXJIM"></gmpx-store-locator>
+
+
+
+    <!--  -->
     <gmp-map-3d center="37.841157, -122.551679" tilt="67.5"></gmp-map-3d>
     <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAd0enxIW1Gw282RLLjlxmVearQfnjXJIM&v=alpha&libraries=maps3d"></script>
+
 </body>
 </html>
+
+
+
+
+    

@@ -156,3 +156,198 @@
     color: lightslategray;
     font-size: 15px;
 }
+
+
+/* This is the sharing a 3D Map CSS CODE */
+.Sharing_3D_Map
+{
+    margin-bottom: 5%;
+}
+
+.Sharing_3D_Map_H2
+{
+    color: #486284;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.Sharing_3D_Map_Text
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3%;
+}
+
+.Sharing_3D_Map_P
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 37%;
+    margin-right: 37%;
+}
+
+.Sharing_3D_Map_Image_Text_Section
+{
+    display: flex;
+    gap: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.Sharing_3D_Map_Image
+{
+    width: 500px;
+    height: 400px;
+}
+
+.Sharing_3D_Map_Location_Image
+{
+    width: 40px;
+    height: 40px;
+}
+
+.Sharing_3D_Map_Container
+{
+    display: flex;
+    gap: 3%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3%;
+}
+
+.Sharing_3D_Map_H1
+{
+    font-size: 22px;
+}
+
+/* This is Sample Location Images CSS Code */
+.Sample_Location_Images
+{
+    padding: 5%;
+    display: flex;
+    gap: 5%;
+    background-color: #F3F3F3;
+    margin-bottom: 5%;
+}
+
+.Sample_Location_Image1
+{
+    width: 596px;
+    height: 375px;
+}
+
+/* This is testimonial Cards CSS Code */
+.Testimonial_Section
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10%;
+}
+
+.Testimonial_Cards
+{
+    background-color: #D3DCE7;
+    padding: 5%;
+    border-radius: 10px;
+}
+
+.Testimonial_Cards_Image
+{
+    background-color: white;
+    padding: 10%;
+    border-radius: 100px;
+}
+
+.Testimonial_Cards_UserName_Location
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.Testimonial_Cards_Image_UserName_Section
+{
+    display: flex;
+    gap: 5%;
+    margin-bottom: 2%;
+}
+
+.Testimonial_Cards_UserName
+{
+    color: #486284;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.Testimonial_Cards_Location
+{
+    font-size: 15px;
+}
+
+.Testimonial_Cards_Section
+{
+    margin-left: 5%;
+    margin-right: 5%;
+    gap: 5%;
+    margin-top: 5%;
+    display: flex;
+}
+
+.Testimonial_Section_H1
+{
+    color: #486284;
+    font-weight: 500;
+}
+
+/* This is footer section CSS Code */
+.Footer_Section
+{
+    background-color: #D3DCE7;
+    padding: 5%;
+    display: flex;
+    gap: 15%;
+}
+
+.Footer_Section_Points
+{
+    display: flex;
+    gap: 30%;
+}
+
+.Footer_Section_H1
+{
+    font-weight: lighter;
+}
+
+.Footer_Section_H5
+{
+    margin-top: 1%;
+    margin-bottom: 15%;
+    color: #394253;
+    font-size: 15px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.Footer_Section_P
+{
+    color: #1A202C;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.Footer_Section_Image
+{
+    width: 140px;
+    height: 87px;
+}
+
+.Footer_Section_Social
+{
+    width: 30px;
+    height: 30px;
+}

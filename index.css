@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+/* This is the Navbar CSS Code */
+.Navbar_Container
+{
+    background-color: #CED7E4;
+    display: flex;
+    gap: 500px;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    border: 2px solid black;
+}
+
+.Ul_Container
+{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.Li_Container
+{
+    cursor: pointer;
+    list-style: none;
+    color: #143158;
+}
+
+.Gmail_Btn
+{
+    background-color: #486284;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.Image_Container
+{
+    width: 150px;
+    height: 100px;
+    margin-top: 10%;
+}
+
+
+/* This is the Header CSS Code */
+.Header_Container
+{
+    background-color: #CED7E4;
+    display: flex;
+    padding-top: 1%;
+    padding-bottom: 4%;
+    justify-content: center;
+    align-items: center;
+}
+
+.Header_Section1
+{
+    margin-left: 9%;
+    margin-right: 9%;
+}
+
+.Header_P
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: grey;
+    margin-right: 30%;
+}
+
+.Send_Postcard_Btn
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    font-weight: 700;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.Header_Text
+{
+    font-weight: bold;
+    font-size: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.Header_Section2
+{
+    background-color: #98BAEB;
+    padding: 2%;
+    border-top-left-radius: 25px;
+}
+
+.Header_Section2_Image
+{
+    width: 700px;
+    height: 400px;
+}
+
+.Header2_Text
+{
+    font-size: 15px;
+    margin-bottom: 1%;
+    background-color: #98BAEB;
+}
+
+
+/* This is the 3D Map Container CSS Code */
+.Why_3D_Map_Container
+{
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color: white;
+}
+
+.Why_3D_Map_Text
+{
+    margin-bottom: 2%;
+}
+
+.Why_3D_Map_P
+{
+    margin-bottom: 1%;
+}
+
+.Why_3D_Map_P2
+{
+    margin-bottom: 1%;
+}
+
+.Why_3D_Map_H3
+{
+    margin-bottom: 1%;
+    margin-top: 1%;
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+.Why_3D_Map_H5
+{
+    margin-top: 3px;
+    margin-bottom: 3px;
+    color: lightslategray;
+    font-size: 15px;
+}

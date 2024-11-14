@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Photorealistic 3D Maps Demo</title>
+        <link
+            rel="stylesheet"
+            href="styles.css" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    </head>
+    <body>
+        <!--Places Autocomplete Card-->
+        <div
+            class="pac-card"
+            id="pac-card">
+            <div>
+                <div id="title">Autocomplete search</div>
+                <div
+                    id="type-selector"
+                    class="pac-controls">
+                    <input
+                        type="radio"
+                        name="type"
+                        id="changetype-all"
+                        checked="checked" />
+                    <label for="changetype-all">All</label>
+
+                    <input
+                        type="radio"
+                        name="type"
+                        id="changetype-establishment" />
+                    <label for="changetype-establishment">establishment</label>
+
+                    <input
+                        type="radio"
+                        name="type"
+                        id="changetype-address" />
+                    <label for="changetype-address">address</label>
+
+                    <input
+                        type="radio"
+                        name="type"
+                        id="changetype-geocode" />
+                    <label for="changetype-geocode">geocode</label>
+
+                    <input
+                        type="radio"
+                        name="type"
+                        id="changetype-cities" />
+                    <label for="changetype-cities">(cities)</label>
+
+                    <input
+                        type="radio"
+                        name="type"
+                        id="changetype-regions" />
+                    <label for="changetype-regions">(regions)</label>
+                </div>
+                <br />
+                <!--TODO: Bias to map viewport and Strict bounds still doesn't work-->
+                <div
+                    id="strict-bounds-selector"
+                    class="pac-controls">
+                    <input
+                        type="checkbox"
+                        id="use-location-bias"
+                        value=""
+                        checked />
+                    <label for="use-location-bias">Bias to map viewport</label>
+
+                    <input
+                        type="checkbox"
+                        id="use-strict-bounds"
+                        value="" />
+                    <label for="use-strict-bounds">Strict bounds</label>
+                </div>
+                <!--TODO--------------------------------------------------------------------->
+            </div>
+            <div id="pac-container">
+                <input
+                    id="pac-input"
+                    type="text"
+                    placeholder="Enter a location" />
+            </div>
+            
+            <div id="location-info" style="border: 1px solid red; padding: 10px;">
+                <!-- Location data will be displayed here -->
+            </div>
+            
+            <div style="border: 1px solid red; padding: 10px; display: inline-block;">
+
+                <button id="sendPostcard" style="
+                    background-color: #ff6b6b;
+                    color: white;
+                    padding: 10px 20px;
+                    border: none;
+                    border-radius: 8px;
+                    font-size: 16px;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease, transform 0.2s ease;"
+                onclick="window.location.href='PostCard.html'">
+
+                >
+                    Send Postcard
+                </button>
+            </div>
+            
+            
+        </div>
+     
+    
+        <div id="screenshotModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); justify-content: center; align-items: center; z-index: 2000;">
+            <div style="background: white; padding: 20px; border-radius: 8px; max-width: 90%; max-height: 90%; text-align: center;">
+                <h2>Captured Location</h2>
+                <img id="screenshotImage" src="" alt="Location Screenshot" style="max-width: 100%; max-height: 400px; border: 1px solid #ddd;">
+                <br><br>
+                <button id="downloadButton">Download Image</button>
+                <button id="closeModal">Close</button>
+            </div>
+        </div>
+        <div id="chatbot-button" onclick="toggleChatbot()">
+            💬
+        </div>
+        <div id="chatbot-container">
+            <h2>Chat with our AI Bot</h2>
+            <div id="chat-log"></div>
+            <input type="text" id="user-question" placeholder="Ask a question..." />
+            <button id="ask-question">Ask</button>
+            <div id="chatbot-response"></div>  <!-- Added element to display chatbot response -->
+        </div>
+        <!--End of Places Autocomplete Card-->
+
+        <!-- prettier-ignore-->
+        <script>
+            (g => { var h, a, k, p = "AIzaSyAM_HQJID095dTc6CwiPtjSHPHKcddpp4o", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })({
+                key: "AIzaSyAM_HQJID095dTc6CwiPtjSHPHKcddpp4o",
+                v: "alpha"
+                });
+        </script>
+        <script src="initMap.js"></script>
+        <!--Script to start the map must come first before other scripts.-->
+        <script src="placesAutocomplete.js"></script>
+        <script>
+            init();
+        </script>
+    </body>
+</html>

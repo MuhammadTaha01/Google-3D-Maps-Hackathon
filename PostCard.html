@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <!-- Include EmailJS SDK -->
+    <!-- <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script> -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"> </script>
+
     <title>Send Post Card</title>
 </head>
 
@@ -18,7 +22,16 @@
         <div class="Ul_Li_Container">
             <ul class="Ul_Container">
                 <li class="Li_Container">Home</li>
-                <li class="Li_Container">Send a PostCard</li>
+                <!-- <li class="Li_Container" id="send-email">Send a PostCard</li> -->
+                <!-- Add an input field for the recipient's email -->
+                <div class="email-container">
+                    <label for="recipient-email">Recipient Email:</label>
+                    <input type="email" id="recipient-email" placeholder="Enter recipient's email" required>
+                </div>
+
+                <!-- Your existing button -->
+                <li class="Li_Container" id="send-email">Send a PostCard</li>
+
                 <li class="Li_Container">Go there (Ai Prompts)</li>
                 <li class="Li_Container">Adventures & Challenges</li>
                 <li class="Li_Container">Testimonials</li>
@@ -273,5 +286,143 @@
      </div>
 
 </body>
+
+<script>
+// Initialize EmailJS
+(function() {
+    emailjs.init('5QGPzLPQP1DIux-1V'); // Replace with your EmailJS user ID
+})();
+
+// Send Email Function
+document.getElementById('send-email').addEventListener('click', function() {
+    // Get the email entered by the user
+    const recipientEmail = document.getElementById('recipient-email').value;
+
+    // Validate email input
+    if (!recipientEmail) {
+        alert('Please enter a valid recipient email address!');
+        return;
+    }
+
+    const templateParams = {
+        to_email: recipientEmail, // User-entered email
+        subject: 'Sending a Postcard!',
+        message: `
+            Hello Dear [Mom/Dad/Friend],<br><br>
+            I hope this email finds you in great health and spirits!<br>
+            I am writing to share an exciting update about my current adventure.<br><br>
+            <b>Country:</b> Your Country<br>
+            <b>Latitude:</b> 12.34<br>
+            <b>Longitude:</b> 56.78<br><br>
+            <img src="https://i.sstatic.net/CzZYs.gif" alt="Postcard GIF" style="width:300px;height:auto;"><br><br>
+            Take care and stay in touch!<br>
+            Best regards,<br>
+            Your Name
+        `
+    };
+
+    // Send email via EmailJS
+    emailjs.send('service_ckjn0d9', 'template_he0g029', templateParams)
+        .then(function(response) {
+            alert('Email sent successfully!');
+        }, function(error) {
+            alert('Failed to send email: ' + error.text);
+        });
+});
+
+
+
+
+    function getUserCountry() {
+        const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        let country = "Unknown Country";
+        if (timezone) {
+            const timezoneToCountryMap = {
+                // North America
+                "America/New_York": "United States",
+                "America/Chicago": "United States",
+                "America/Denver": "United States",
+                "America/Los_Angeles": "United States",
+                "America/Toronto": "Canada",
+                "America/Vancouver": "Canada",
+                "America/Mexico_City": "Mexico",
+
+                // South America
+                "America/Sao_Paulo": "Brazil",
+                "America/Argentina/Buenos_Aires": "Argentina",
+                "America/Santiago": "Chile",
+                "America/Bogota": "Colombia",
+
+                // Europe
+                "Europe/London": "United Kingdom",
+                "Europe/Dublin": "Ireland",
+                "Europe/Paris": "France",
+                "Europe/Berlin": "Germany",
+                "Europe/Madrid": "Spain",
+                "Europe/Rome": "Italy",
+                "Europe/Amsterdam": "Netherlands",
+                "Europe/Brussels": "Belgium",
+                "Europe/Zurich": "Switzerland",
+                "Europe/Stockholm": "Sweden",
+                "Europe/Oslo": "Norway",
+                "Europe/Copenhagen": "Denmark",
+                "Europe/Warsaw": "Poland",
+                "Europe/Budapest": "Hungary",
+                "Europe/Prague": "Czech Republic",
+                "Europe/Vienna": "Austria",
+                "Europe/Helsinki": "Finland",
+                "Europe/Lisbon": "Portugal",
+                "Europe/Athens": "Greece",
+                "Europe/Moscow": "Russia",
+                "Europe/Belgrade": "Serbia",
+                "Europe/Sofia": "Bulgaria",
+                "Europe/Bucharest": "Romania",
+
+                // Asia
+                "Asia/Tokyo": "Japan",
+                "Asia/Seoul": "South Korea",
+                "Asia/Shanghai": "China",
+                "Asia/Hong_Kong": "Hong Kong",
+                "Asia/Singapore": "Singapore",
+                "Asia/Kuala_Lumpur": "Malaysia",
+                "Asia/Jakarta": "Indonesia",
+                "Asia/Karachi": "Pakistan",
+                "Asia/Delhi": "India",
+                "Asia/Colombo": "Sri Lanka",
+                "Asia/Dhaka": "Bangladesh",
+                "Asia/Bangkok": "Thailand",
+                "Asia/Manila": "Philippines",
+                "Asia/Dubai": "United Arab Emirates",
+                "Asia/Tehran": "Iran",
+                "Asia/Baghdad": "Iraq",
+                "Asia/Jerusalem": "Israel",
+
+                // Africa
+                "Africa/Johannesburg": "South Africa",
+                "Africa/Lagos": "Nigeria",
+                "Africa/Cairo": "Egypt",
+                "Africa/Nairobi": "Kenya",
+                "Africa/Accra": "Ghana",
+                "Africa/Addis_Ababa": "Ethiopia",
+
+                // Oceania
+                "Australia/Sydney": "Australia",
+                "Australia/Melbourne": "Australia",
+                "Australia/Brisbane": "Australia",
+                "Pacific/Auckland": "New Zealand",
+                "Pacific/Fiji": "Fiji",
+
+                // Middle East
+                "Asia/Riyadh": "Saudi Arabia",
+                "Asia/Kuwait": "Kuwait",
+                "Asia/Doha": "Qatar",
+            };
+
+            country = timezoneToCountryMap[timezone] || "Unknown Country";
+        }
+
+        return country;
+    }
+</script>
 
 </html>

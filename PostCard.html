@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <!-- Include EmailJS SDK -->
+    <!-- <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script> -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"> </script>
+
+    <title>Send Post Card</title>
+</head>
+
+<body>
+
+    <!-- This is Navbar Section -->
+    <div class="Navbar_Container">
+        <div class="">
+            <img src="./assets/Icon.png" alt="" class="Image_Container">
+        </div>
+        <div class="Ul_Li_Container">
+            <ul class="Ul_Container">
+                <li class="Li_Container">Home</li>
+                <!-- <li class="Li_Container" id="send-email">Send a PostCard</li> -->
+                <!-- Add an input field for the recipient's email -->
+                <div class="email-container">
+                    <label for="recipient-email">Recipient Email:</label>
+                    <input type="email" id="recipient-email" placeholder="Enter recipient's email" required>
+                </div>
+
+                <!-- Your existing button -->
+                <li class="Li_Container" id="send-email">Send a PostCard</li>
+
+                <li class="Li_Container">Go there (Ai Prompts)</li>
+                <li class="Li_Container">Adventures & Challenges</li>
+                <li class="Li_Container">Testimonials</li>
+                <li class="Li_Container">Business Solutions</li>
+                <button class="Gmail_Btn">Gmail Login</button>
+            </ul>
+        </div>
+    </div>
+
+    <!-- This is Header Section -->
+    <div class="Header_Container">
+
+        <div class="Header_Section1">
+            <h1 class="Header_Text">3D Map Postcard</h1>
+            <p class="Header_P">Share the World, Memories and Adventures. Deepen Social Connection with
+                with Easy-to-Use Google 3D Maps.</p>
+            <button class="Send_Postcard_Btn">Send a 3D Map Postcard or Just Explore</button>
+        </div>
+
+        <div class="Header_Section2">
+            <h5 class="Header2_Text">GMAIL: Hi Mom, This is where we are going next month. You’ve been there, right?
+                Click on the Pink Dot and You’ll see something special. Send back any Travel tips for me! - Love you!
+            </h5>
+            <img src="./assets/Header_Image.png" alt="" class="Header_Section2_Image">
+        </div>
+
+    </div>
+
+    <!-- This is Why 3D Map PostCard Section -->
+    <div class="Why_3D_Map_Container">
+        <h1 class="Why_3D_Map_Text">Why 3D Map Postcards?</h1>
+        <p class="Why_3D_Map_P">Google Maps and Google Earth aren't new but 3D Photorealistic Maps are. The goal is to
+            make the experience
+            easier for users to access maps. Like anything we have to walk before we can run and 3DMapsPostcard gives
+            people a baby step to experiment and share 3DMaps. It is especially a great way to make maps accessible to
+            all ages. In addition, to spreading joy and sharing the world,</p>
+        <p class="Why_3D_Map_P2">3DMAPPOSTCARDS also has an engaging geo-learning component -- quizzes prompted by AI to
+            get you thinking and
+            learning about the locations you visit and share using 3DMAP PostCards easier for the user to access maps.
+            Like
+            anything we have to walk before we can run and 3DMapsPostcard gives people a baby step to experiment and
+            share
+            3DMaps.</p>
+
+        <h3 class="Why_3D_Map_H3">Personalized Location Discovery</h3>
+        <h5 class="Why_3D_Map_H5">+Easy to share memories and stories</h5>
+        <h5 class="Why_3D_Map_H5">+Promotes Joy via Nostalgia and story-sharing</h5>
+        <h5 class="Why_3D_Map_H5">+Reduces feeling of isolation</h5>
+        <h5 class="Why_3D_Map_H5">+Engaging Geo Learning</h5>
+
+        <h3 class="Why_3D_Map_H3">PostCards</h3>
+        <h5 class="Why_3D_Map_H5">+Easy to use</h5>
+        <h5 class="Why_3D_Map_H5">+Facilities communication</h5>
+        <h5 class="Why_3D_Map_H5">+Social Connection</h5>
+
+        <h3 class="Why_3D_Map_H3">Interactive Sharing</h3>
+        <h5 class="Why_3D_Map_H5">+Prompts follow up communication</h5>
+        <h5 class="Why_3D_Map_H5">+Quizzes, Scavenger Hunts</h5>
+        <h5 class="Why_3D_Map_H5">+ Adventure/Travel Prompts</h5>
+        <h5 class="Why_3D_Map_H5">+ Place Prompts</h5>
+
+        <h3 class="Why_3D_Map_H3">For Business</h3>
+        <h5 class="Why_3D_Map_H5">+Business Place Sharing</h5>
+        <h5 class="Why_3D_Map_H5">+Rewards, Coupons</h5>
+        <h5 class="Why_3D_Map_H5">+Fosters Sharing stories & Community via Social</h5>
+
+    </div>
+
+    <!-- It starts by sharing a 3D Map -->
+    <div class="Sharing_3D_Map">
+
+        <div class="Sharing_3D_Map_Text">
+            <h2 class="Sharing_3D_Map_H2">It Starts by Sharing a 3D Map</h2>
+            <p class="Sharing_3D_Map_P">Sharing Memories of Places & Planning Adventures
+                is the Start of Meaningful Interactive Connection</p>
+        </div>
+
+        <div class="Sharing_3D_Map_Image_Text_Section">
+
+            <div class="Sharing_3D_Map_Image">
+                <img src="./assets/Sharing_3D_Map.png" alt="" class="Sharing_3D_Map_Image">
+            </div>
+
+            <div class="Sharing_3D_Map_Text">
+                <div class="Sharing_3D_Map_Container">
+                    <div class="">
+                        <img src="./assets/Location.png" alt="" class="Sharing_3D_Map_Location_Image">
+                    </div>
+                    <div class="">
+                        <h1 class="Sharing_3D_Map_H1">Start by Sending a 3D Map Postcard</h1>
+                        <p>Click on the link and you are prompted to enter a place - and an email with generate with a
+                            cutout of your place - add a Happy Birthday, Thinking of You, or personal message.</p>
+                    </div>
+                </div>
+
+                <div class="Sharing_3D_Map_Container">
+                    <div class="">
+                        <img src="./assets/Location.png" alt="" class="Sharing_3D_Map_Location_Image">
+                    </div>
+                    <div class="">
+                        <h1 class="Sharing_3D_Map_H1">This prompts More Sharing</h1>
+                        <p>Click on the link and you are prompted to enter a place - and an email with generate with a
+                            cutout of your place - add a Happy Birthday, Thinking of You, or personal message.</p>
+                    </div>
+                </div>
+
+                <div class="Sharing_3D_Map_Container">
+                    <div class="">
+                        <img src="./assets/Location.png" alt="" class="Sharing_3D_Map_Location_Image">
+                    </div>
+                    <div class="">
+                        <h1 class="Sharing_3D_Map_H1">And, then the Challenges Come</h1>
+                        <p>Click on the link and you are prompted to enter a place - and an email with generate with a
+                            cutout of your place - add a Happy Birthday, Thinking of You, or personal message.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Sample 2 Maps Location Images -->
+    <div class="Sample_Location_Images">
+        <div class="">
+            <img src="./assets/SampleImage1.png" alt="" class="Sample_Location_Image1">
+        </div>
+        <div class="">
+            <img src="./assets/SampleImage2.png" alt="" class="Sample_Location_Image2">
+        </div>
+    </div>
+
+    <!-- Testimonial of user for Google 3D Maps -->
+    <div class="Testimonial_Section">
+        <div class="Testimonial_Section_H1">
+            <h1 class="Testimonial_Section_H1">3D Map Postcards are Engaging & Connect All Ages</h1>
+        </div>
+        <div class="Testimonial_Section_P">
+            <p class="Testimonial_Section_P">You really feel like you are there!</p>
+        </div>
+
+        <div class="Testimonial_Cards_Section">
+
+            <div class="Testimonial_Cards">
+                <div class="Testimonial_Cards_Image_UserName_Section">
+                    <div class="Testimonial_Cards_Image"></div>
+                    <div class="Testimonial_Cards_UserName_Location">
+                        <div class="Testimonial_Cards_UserName">
+                            Cheri, 45
+                        </div>
+                        <div class="Testimonial_Cards_Location">
+                            <h2 class="Testimonial_Cards_Location">Atlanta, GA</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="Testimonial_Cards_P">
+                    <p class="Testimonial_Section_P">
+                        “I’m visitng Italy this summer with friends. We have been sharing maps for a few months now.
+                        It’s fun to create itineraries and you learn so much. We are finding and prioirtizing all the
+                        places we want to see in person”..
+                    </p>
+                </div>
+            </div>
+
+            <div class="Testimonial_Cards">
+                <div class="Testimonial_Cards_Image_UserName_Section">
+                    <div class="Testimonial_Cards_Image"></div>
+                    <div class="Testimonial_Cards_UserName_Location">
+                        <div class="Testimonial_Cards_UserName">
+                            Fred, 85
+                        </div>
+                        <div class="Testimonial_Cards_Location">
+                            <h2 class="Testimonial_Cards_Location">Austin, TX</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="Testimonial_Cards_P">
+                    <p class="Testimonial_Section_P">
+                        Feels like I am in Japan again like when I was on deployment in the Navy. I’m walking the
+                        streets of Yokahama. Maybe kinda like those goggles kids wear -- but that makes me dizzy this is
+                        easy to use even for an old guy like me.”
+                    </p>
+                </div>
+            </div>
+
+            <div class="Testimonial_Cards">
+                <div class="Testimonial_Cards_Image_UserName_Section">
+                    <div class="Testimonial_Cards_Image"></div>
+                    <div class="Testimonial_Cards_UserName_Location">
+                        <div class="Testimonial_Cards_UserName">
+                            Marcia, 38
+                        </div>
+                        <div class="Testimonial_Cards_Location">
+                            <h2 class="Testimonial_Cards_Location">Business Owner</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="Testimonial_Cards_P">
+                    <p class="Testimonial_Section_P">
+                        “ I’ve enjoyed using this personally sharing with my parents and kids. But really having a lot
+                        of success making the map and sharing with customers via my email platform. It’s making a
+                        community and my customers love sharing their stories.”.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- This is the footer section -->
+     <div class="Footer_Section">
+        
+        <div class="Footer_Section_Image_Text">
+            <div class="Footer_Section_Image">
+                <img src="./assets/Icon.png" alt="" class="Footer_Section_Image">
+            </div>
+            <div class="Footer_Section_P">
+                <p class="Footer_Section_P">Our vision is to provide convenience and help increase your sales business.</p>
+            </div>
+            <div class="">
+                <img src="./assets/Location.png" alt="" class="Footer_Section_Social">
+                <img src="./assets/Location.png" alt="" class="Footer_Section_Social">
+                <img src="./assets/Location.png" alt="" class="Footer_Section_Social">
+            </div>
+        </div>
+
+        <div class="Footer_Section_Points">
+            <div class="">
+                <h1 class="Footer_Section_H1">About</h1>
+                <h5 class="Footer_Section_H5">How it works</h5>
+                <h5 class="Footer_Section_H5">Featured</h5>
+                <h5 class="Footer_Section_H5">Partnership</h5>
+                <h5 class="Footer_Section_H5">Business Relation</h5>
+            </div>
+            <div class="">
+                <h1 class="Footer_Section_H1">Community</h1>
+                <h5 class="Footer_Section_H5">Events</h5>
+                <h5 class="Footer_Section_H5">Blogs</h5>
+                <h5 class="Footer_Section_H5">Podcast</h5>
+                <h5 class="Footer_Section_H5">Invite a friend</h5>
+            </div>
+            <div class="">
+                <h1 class="Footer_Section_H1">Socials</h1>
+                <h5 class="Footer_Section_H5">Discord</h5>
+                <h5 class="Footer_Section_H5">Instagram</h5>
+                <h5 class="Footer_Section_H5">Facebook</h5>
+                <h5 class="Footer_Section_H5">Twitter</h5>
+            </div>
+        </div>
+     
+     </div>
+
+</body>
+
+<script>
+// Initialize EmailJS
+(function() {
+    emailjs.init('5QGPzLPQP1DIux-1V'); // Replace with your EmailJS user ID
+})();
+
+// Send Email Function
+document.getElementById('send-email').addEventListener('click', function() {
+    // Get the email entered by the user
+    const recipientEmail = document.getElementById('recipient-email').value;
+
+    // Validate email input
+    if (!recipientEmail) {
+        alert('Please enter a valid recipient email address!');
+        return;
+    }
+
+    const templateParams = {
+        to_email: recipientEmail, // User-entered email
+        subject: 'Sending a Postcard!',
+        message: `
+            Hello Dear [Mom/Dad/Friend],<br><br>
+            I hope this email finds you in great health and spirits!<br>
+            I am writing to share an exciting update about my current adventure.<br><br>
+            <b>Country:</b> Your Country<br>
+            <b>Latitude:</b> 12.34<br>
+            <b>Longitude:</b> 56.78<br><br>
+            <img src="https://i.sstatic.net/CzZYs.gif" alt="Postcard GIF" style="width:300px;height:auto;"><br><br>
+            Take care and stay in touch!<br>
+            Best regards,<br>
+            Your Name
+        `
+    };
+
+    // Send email via EmailJS
+    emailjs.send('service_ckjn0d9', 'template_he0g029', templateParams)
+        .then(function(response) {
+            alert('Email sent successfully!');
+        }, function(error) {
+            alert('Failed to send email: ' + error.text);
+        });
+});
+
+
+
+
+    function getUserCountry() {
+        const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        let country = "Unknown Country";
+        if (timezone) {
+            const timezoneToCountryMap = {
+                // North America
+                "America/New_York": "United States",
+                "America/Chicago": "United States",
+                "America/Denver": "United States",
+                "America/Los_Angeles": "United States",
+                "America/Toronto": "Canada",
+                "America/Vancouver": "Canada",
+                "America/Mexico_City": "Mexico",
+
+                // South America
+                "America/Sao_Paulo": "Brazil",
+                "America/Argentina/Buenos_Aires": "Argentina",
+                "America/Santiago": "Chile",
+                "America/Bogota": "Colombia",
+
+                // Europe
+                "Europe/London": "United Kingdom",
+                "Europe/Dublin": "Ireland",
+                "Europe/Paris": "France",
+                "Europe/Berlin": "Germany",
+                "Europe/Madrid": "Spain",
+                "Europe/Rome": "Italy",
+                "Europe/Amsterdam": "Netherlands",
+                "Europe/Brussels": "Belgium",
+                "Europe/Zurich": "Switzerland",
+                "Europe/Stockholm": "Sweden",
+                "Europe/Oslo": "Norway",
+                "Europe/Copenhagen": "Denmark",
+                "Europe/Warsaw": "Poland",
+                "Europe/Budapest": "Hungary",
+                "Europe/Prague": "Czech Republic",
+                "Europe/Vienna": "Austria",
+                "Europe/Helsinki": "Finland",
+                "Europe/Lisbon": "Portugal",
+                "Europe/Athens": "Greece",
+                "Europe/Moscow": "Russia",
+                "Europe/Belgrade": "Serbia",
+                "Europe/Sofia": "Bulgaria",
+                "Europe/Bucharest": "Romania",
+
+                // Asia
+                "Asia/Tokyo": "Japan",
+                "Asia/Seoul": "South Korea",
+                "Asia/Shanghai": "China",
+                "Asia/Hong_Kong": "Hong Kong",
+                "Asia/Singapore": "Singapore",
+                "Asia/Kuala_Lumpur": "Malaysia",
+                "Asia/Jakarta": "Indonesia",
+                "Asia/Karachi": "Pakistan",
+                "Asia/Delhi": "India",
+                "Asia/Colombo": "Sri Lanka",
+                "Asia/Dhaka": "Bangladesh",
+                "Asia/Bangkok": "Thailand",
+                "Asia/Manila": "Philippines",
+                "Asia/Dubai": "United Arab Emirates",
+                "Asia/Tehran": "Iran",
+                "Asia/Baghdad": "Iraq",
+                "Asia/Jerusalem": "Israel",
+
+                // Africa
+                "Africa/Johannesburg": "South Africa",
+                "Africa/Lagos": "Nigeria",
+                "Africa/Cairo": "Egypt",
+                "Africa/Nairobi": "Kenya",
+                "Africa/Accra": "Ghana",
+                "Africa/Addis_Ababa": "Ethiopia",
+
+                // Oceania
+                "Australia/Sydney": "Australia",
+                "Australia/Melbourne": "Australia",
+                "Australia/Brisbane": "Australia",
+                "Pacific/Auckland": "New Zealand",
+                "Pacific/Fiji": "Fiji",
+
+                // Middle East
+                "Asia/Riyadh": "Saudi Arabia",
+                "Asia/Kuwait": "Kuwait",
+                "Asia/Doha": "Qatar",
+            };
+
+            country = timezoneToCountryMap[timezone] || "Unknown Country";
+        }
+
+        return country;
+    }
+</script>
+
+</html>
